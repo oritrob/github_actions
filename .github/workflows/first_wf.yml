@@ -7,10 +7,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: echo whoami
-        run: echo whoami
+        run: echo $(whoami)
       - name: echo a string
         run: echo "A String"
       - name: show node and npm version(multiline script)
         run: |
           node -v
           npm -v
+      - name: python code
+        run: |
+          import platform
+          print(plaform.processor)
+        shell: python
